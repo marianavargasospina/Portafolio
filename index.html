@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariana Vargas Ospina | Desarrolladora Backend y Frontend</title>
+    <title>Mariana Vargas Ospina</title>
     <meta name="description" content="Portafolio de Mariana Vargas Ospina, Desarrolladora Full Stack. Arquitecturas backend, APIs REST y desarrollo frontend accesible e innovador.">
     
     <!-- Tipografías minimalistas -->
@@ -42,9 +42,9 @@
     <!-- Navegación -->
     <nav class="fixed w-full backdrop-blur-md bg-white/70 dark:bg-[#121212]/80 z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-heading font-bold text-xl tracking-tight">MarianaVargas.</a>
+            <a href="#" class="font-heading font-bold text-xl tracking-tight">Mariana Vargas.</a>
             <div class="flex items-center gap-6">
-                <a href="#sobre-mi" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Sobre Mí</a>
+                <a href="#sobre-mi" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Sobre mí</a>
                 <a href="#proyectos" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Proyectos</a>
                 <a href="#habilidades" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Habilidades</a>
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors focus:outline-none" aria-label="Cambiar tema">
@@ -63,12 +63,12 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
             </span>
-            Abierta a Roles Formales, Freelance & Colaboraciones Dev
+            Abierta a Roles Formales, Freelance & Colaboraciones Dev 
         </div>
 
         <h1 class="font-heading text-5xl md:text-7xl font-bold leading-tight mb-6">
             Ingeniera en formación. <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Desarrolladora por vocación.</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Amante al codigo.</span>
         </h1>
         
         <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-10 font-light leading-relaxed">
@@ -139,70 +139,110 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="font-heading text-3xl font-bold mb-12">Proyectos Destacados</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Grid Responsivo para 4 Proyectos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- FinTrack -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col h-full hover:border-accent/50 transition-colors duration-300">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
+                <!-- Proyecto 1: FinTrack -->
+                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
                             <h3 class="font-heading text-2xl font-bold">FinTrack</h3>
-                            <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio FinTrack"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-sm text-accent font-medium mb-3">Backend / Gestión Financiera</p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-2 list-disc pl-4">
-                            <li>Implementación de arquitectura backend por capas (Routers, Services, Repositories, Database).</li>
-                            <li>Autenticación segura mediante JWT/Bearer Tokens y almacenamiento de contraseñas con Bcrypt/Passlib.</li>
-                            <li>Endpoints REST creados con SQLAlchemy y Pydantic.</li>
-                            <li>Pruebas automatizadas configuradas con Pytest y HTTPX.</li>
+                        <p class="text-sm text-accent font-semibold mb-3">Backend & Full Stack / Gestión Financiera</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
+                            Plataforma de gestión de finanzas personales para administración de ingresos, gastos, transferencias, cuentas, presupuestos y metas de ahorro con Dashboard interactivo.
+                        </p>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
+                            <li>Arquitectura por capas: Routers, Services, Repositories y Database.</li>
+                            <li>Autenticación segura JWT y cifrado de contraseñas con Bcrypt.</li>
+                            <li>Dashboard con gráficas, filtrado y exportación de movimientos.</li>
+                            <li>Pruebas automatizadas de API integradas con Pytest y HTTPX.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
                         <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">Python</span>
                         <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">FastAPI</span>
                         <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">SQLAlchemy</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">Pydantic</span>
                     </div>
                 </article>
 
-                <!-- CodeClean AI -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col h-full hover:border-accent/50 transition-colors duration-300">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
+                <!-- Proyecto 2: CodeClean AI -->
+                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
                             <h3 class="font-heading text-2xl font-bold">CodeClean AI</h3>
-                            <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio CodeClean AI"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-sm text-accent font-medium mb-3">Full Stack / Analizador Híbrido</p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-2 list-disc pl-4">
-                            <li>Analizador híbrido que combina reglas estáticas con IA para detectar problemas de accesibilidad (WCAG).</li>
-                            <li>Detección de patrones de mala calidad: imágenes sin alt, estilos inline y botones inaccesibles.</li>
-                            <li>Implementación de fallback local para garantizar análisis sin conexión a servicios de IA.</li>
-                            <li>Persistencia de datos en la interfaz mediante LocalStorage.</li>
+                        <p class="text-sm text-accent font-semibold mb-3">Full Stack / Auditoría de Código con IA</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
+                            Herramienta de auditoría frontend que combina análisis estático con inteligencia artificial para evaluar calidad, semántica HTML y accesibilidad (WCAG).
+                        </p>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
+                            <li>Detección de patrones inaccesibles (imágenes sin alt, estilos inline, botones sin aria).</li>
+                            <li>Evaluación semántica de estructura HTML y puntuación de calidad.</li>
+                            <li>Integración con Groq API y modelo Llama 3 para recomendaciones inteligentes.</li>
+                            <li>Motor de análisis local de respaldo (fallback) ante caídas de conexión.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
                         <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">JavaScript</span>
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">API Llama/Groq</span>
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">Groq API</span>
+                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">Llama 3</span>
+                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">HTML5/CSS3</span>
                     </div>
                 </article>
 
-                <!-- Noticiasisa -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col h-full hover:border-accent/50 transition-colors duration-300">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
+                <!-- Proyecto 3: Noticiasisa -->
+                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
                             <h3 class="font-heading text-2xl font-bold">Noticiasisa</h3>
-                            <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio Noticiasisa"><i class="fa-brands fa-github text-xl"></i></a>
                         </div>
-                        <p class="text-sm text-accent font-medium mb-3">Frontend / Plataforma Editorial</p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-2 list-disc pl-4">
-                            <li>Plataforma editorial responsive enfocada en accesibilidad y experiencia multiplataforma.</li>
-                            <li>Integración de Web Speech API para narración automática de artículos (reproducción, pausa y selección de voz).</li>
-                            <li>Implementación de atributos ARIA y gestión de estados dinámicos para tecnologías de asistencia.</li>
+                        <p class="text-sm text-accent font-semibold mb-3">Frontend / Plataforma Editorial Accesible</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
+                            Plataforma web informativa con arquitectura responsive enfocada en accesibilidad universal y síntesis de voz para lectura automatizada de noticias.
+                        </p>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
+                            <li>Narración automática de artículos mediante integración con Web Speech API.</li>
+                            <li>Controles interactivos de reproducción, pausa y selección de voces.</li>
+                            <li>Implementación de atributos ARIA y estados dinámicos para lectores de pantalla.</li>
+                            <li>Maquetación limpia adaptable a cualquier resolución de pantalla.</li>
                         </ul>
                     </div>
                     <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">JS ES6+</span>
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">Web Speech API</span>
                         <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">HTML5</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4: Landing-Cafeteria -->
+                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-heading text-2xl font-bold">Landing-Cafeteria</h3>
+                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio Landing Cafetería"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-sm text-accent font-semibold mb-3">Frontend / Maquetación Comercial</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
+                            Página web comercial diseñada para transmitir la identidad visual de una cafetería y presentar sus productos y servicios de manera atractiva.
+                        </p>
+                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
+                            <li>Estructura semántica modular y mantenible (`index.html`).</li>
+                            <li>Diseño de estilos visuales limpios y modernos (`styles.css`).</li>
+                            <li>Funcionalidad e interactividad dinámicas con JavaScript (`script.js`).</li>
+                            <li>Optimizada para una experiencia de usuario fluida y navegación comercial.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">HTML5</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">CSS3</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">JavaScript</span>
                     </div>
                 </article>
 
