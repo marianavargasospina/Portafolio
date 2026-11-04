@@ -3,336 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariana Vargas Ospina</title>
-    <meta name="description" content="Portafolio de Mariana Vargas Ospina, Desarrolladora Full Stack. Arquitecturas backend, APIs REST y desarrollo frontend accesible e innovador.">
-    
-    <!-- Tipografías minimalistas -->
+    <meta name="theme-color" content="#fafafa">
+    <meta name="description" content="Portafolio profesional de Mariana Vargas Ospina, estudiante de Ingeniería de Sistemas y desarrolladora web. Proyectos con Python, FastAPI, PostgreSQL y JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mariana Vargas Ospina | Portafolio de desarrollo web">
+    <meta property="og:description" content="Proyectos de desarrollo web, backend, APIs REST y soluciones digitales.">
+    <title>Mariana Vargas Ospina | Desarrolladora Web Junior</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Íconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: "class",
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Space Grotesk', 'sans-serif'],
+                        sans: ["Inter", "sans-serif"],
+                        heading: ["Space Grotesk", "sans-serif"]
                     },
                     colors: {
-                        lightBg: '#FAFAFA',
-                        lightText: '#171717',
-                        darkBg: '#121212',
-                        darkText: '#EDEDED',
-                        accent: '#C026D3' // Tono fucsia/morado central
+                        lightBg: "#FAFAFA",
+                        lightText: "#171717",
+                        darkBg: "#121212",
+                        darkText: "#EDEDED",
+                        accent: "#C026D3"
                     }
                 }
             }
-        }
+        };
     </script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
-<body class="bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText transition-colors duration-300 antialiased selection:bg-accent selection:text-white">
+<body class="bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText antialiased transition-colors duration-300">
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-    <!-- Navegación -->
-    <nav class="fixed w-full backdrop-blur-md bg-white/70 dark:bg-[#121212]/80 z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-heading font-bold text-xl tracking-tight">Mariana Vargas.</a>
-            <div class="flex items-center gap-6">
-                <a href="#sobre-mi" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Sobre mí</a>
-                <a href="#proyectos" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Proyectos</a>
-                <a href="#habilidades" class="hidden md:block text-sm font-medium hover:text-accent transition-colors">Habilidades</a>
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors focus:outline-none" aria-label="Cambiar tema">
-                    <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+    <header class="site-header fixed inset-x-0 top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Navegación principal">
+            <a href="#inicio" class="font-heading font-bold text-xl tracking-tight" aria-label="Mariana Vargas, inicio">Mariana Vargas<span class="text-accent">.</span></a>
+            <div class="flex items-center gap-3">
+                <div id="primary-navigation" class="nav-links">
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <button id="theme-toggle" class="icon-button" type="button" aria-label="Activar tema oscuro" aria-pressed="false">
+                    <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <button id="menu-toggle" class="icon-button mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-controls="primary-navigation" aria-expanded="false">
+                    <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Sección Hero (Impacto Directo) -->
-    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col justify-center min-h-[85vh]">
-        
-        <!-- Insignia de Disponibilidad -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs md:text-sm font-semibold tracking-wide mb-8 w-max border border-purple-200 dark:border-purple-800/50">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
-            </span>
-            Abierta a Roles Formales, Freelance & Colaboraciones Dev 
-        </div>
-
-        <h1 class="font-heading text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Ingeniera en formación. <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Amante al codigo.</span>
-        </h1>
-        
-        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-10 font-light leading-relaxed">
-            Construyo el puente entre la lógica robusta del backend y la interactividad del frontend. Especializada en diseñar arquitecturas escalables, integrar IA y garantizar accesibilidad web para transformar ideas complejas en productos digitales de alto rendimiento.
-        </p>
-
-        <!-- Botones de Acción -->
-        <div class="flex flex-wrap gap-4 items-center">
-            <a href="#proyectos" class="bg-lightText dark:bg-white text-white dark:text-darkBg px-8 py-3.5 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-md">
-                Explorar Proyectos
-            </a>
-            <div class="flex gap-4 ml-2">
-                <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-full border border-gray-300 dark:border-gray-700 hover:text-accent hover:border-accent dark:hover:border-accent transition-colors group" aria-label="GitHub">
-                    <i class="fa-brands fa-github text-xl group-hover:scale-110 transition-transform"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-full border border-gray-300 dark:border-gray-700 hover:text-accent hover:border-accent dark:hover:border-accent transition-colors group" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in text-xl group-hover:scale-110 transition-transform"></i>
-                </a>
-                <a href="mailto:marianavargasospina0@gmail.com?subject=Contacto%20desde%20Portafolio%20Web%20-%20Mariana%20Vargas" class="p-3.5 rounded-full border border-gray-300 dark:border-gray-700 hover:text-accent hover:border-accent dark:hover:border-accent transition-colors group" aria-label="Email">
-                    <i class="fa-solid fa-envelope text-xl group-hover:scale-110 transition-transform"></i>
-                </a>
+    <main id="contenido">
+        <section id="inicio" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col justify-center min-h-[82vh]" aria-labelledby="hero-title">
+            <p class="availability-label"><span aria-hidden="true"></span> Abierta a oportunidades Junior, prácticas y colaboraciones</p>
+            <h1 id="hero-title" class="font-heading text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Desarrollo soluciones web<span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600"> con propósito.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-10 leading-relaxed">
+                Soy estudiante de Ingeniería de Sistemas y desarrolladora web en formación. Me interesa construir aplicaciones funcionales, diseñar APIs y transformar necesidades en soluciones digitales mediante buenas prácticas de desarrollo.
+            </p>
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="#proyectos" class="primary-link">Ver proyectos</a>
+                <a href="#contacto" class="secondary-link">Contactarme</a>
+                <div class="flex gap-3 ml-1">
+                    <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+            <p class="mt-8 text-sm text-gray-500 dark:text-gray-400">Python · FastAPI · PostgreSQL · JavaScript · HTML · CSS</p>
+        </section>
 
-    <!-- Sección Sobre Mí & Educación -->
-    <section id="sobre-mi" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="font-heading text-3xl font-bold mb-6">El Valor que Aporto</h2>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                    Como estudiante avanzada de Ingeniería de Sistemas, poseo una base teórica sólida que traduzco constantemente en código limpio y funcional. Mi enfoque no es solo escribir líneas, sino aplicar estructuras de datos óptimas, análisis exhaustivo de requerimientos y estándares de calidad en cada despliegue.
-                </p>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Estoy profundamente interesada en sumar experiencia a través de contratos formales, asumiendo retos freelance o colaborando activamente en el desarrollo de proyectos y código abierto. Mantengo un nivel de inglés intermedio (B1-B2) y aplico metodologías ágiles (Scrum) para garantizar entregas continuas y de valor.
-                </p>
+        <section id="sobre-mi" class="py-20 px-6" aria-labelledby="about-title">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <p class="section-eyebrow">Perfil</p>
+                    <h2 id="about-title" class="font-heading text-3xl font-bold mb-6">Sobre mí</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Mi formación en Ingeniería de Sistemas en la Universidad Nacional Abierta y a Distancia (UNAD) fortalece mis conocimientos en diseño de software, estructuras de datos, análisis de requerimientos y bases de datos.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Complemento mi formación académica con proyectos prácticos de frontend y backend. Disfruto aprender tecnologías, resolver problemas y aplicar principios como la separación de responsabilidades, la legibilidad y las pruebas de software.
+                    </p>
+                    <div class="mt-7 grid grid-cols-2 gap-4">
+                        <div class="stat-card"><strong>71</strong><span>Créditos académicos completados</span></div>
+                        <div class="stat-card"><strong>4.5+</strong><span>Promedio académico sobre 5.0</span></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3">Información académica reportada en 2026.</p>
+                </div>
+                <div>
+                    <p class="section-eyebrow">Formación</p>
+                    <h2 class="font-heading text-3xl font-bold mb-6">Educación y certificaciones</h2>
+                    <ol class="timeline">
+                        <li>
+                            <h3 class="font-bold">Ingeniería de Sistemas</h3>
+                            <p class="text-sm text-gray-500">Universidad Nacional Abierta y a Distancia (UNAD)</p>
+                            <p class="text-sm text-gray-500">En curso · 2024 – actualidad</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold">Formación en desarrollo web</h3>
+                            <p class="text-sm text-gray-500">HTML, CSS, lógica de programación y diseño web adaptable</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold">Scrum y Product Management</h3>
+                            <p class="text-sm text-gray-500">Formación complementaria en metodologías ágiles y gestión de producto</p>
+                        </li>
+                        <li>
+                            <h3 class="font-bold">Calidad de software e inteligencia artificial</h3>
+                            <p class="text-sm text-gray-500">Formación complementaria en calidad, prompting e integración de datos con IA</p>
+                        </li>
+                    </ol>
+                    <p class="mt-5 text-sm text-gray-500">Inglés: B1.</p>
+                </div>
             </div>
-            <div>
-                <h2 class="font-heading text-3xl font-bold mb-6">Educación & Certificaciones</h2>
-                <ul class="space-y-4">
-                    <li class="border-l-2 border-accent pl-4">
-                        <h4 class="font-bold">Ingeniería de Sistemas</h4>
-                        <p class="text-sm text-gray-500">Universidad Nacional Abierta y a Distancia (UNAD) | 2024 - Presente</p>
-                    </li>
-                    <li class="border-l-2 border-gray-300 dark:border-gray-700 pl-4">
-                        <h4 class="font-bold">Bootcamp Programación Nivel Básico</h4>
-                        <p class="text-sm text-gray-500">MinTIC & Universidad de Antioquia / IU Digital | 2025</p>
-                    </li>
-                    <li class="border-l-2 border-gray-300 dark:border-gray-700 pl-4">
-                        <h4 class="font-bold">Diseño Web Adaptable</h4>
-                        <p class="text-sm text-gray-500">freeCodeCamp | 2026</p>
-                    </li>
-                    <li class="border-l-2 border-gray-300 dark:border-gray-700 pl-4">
-                        <h4 class="font-bold">Calidad de Software & IA en Datos</h4>
-                        <p class="text-sm text-gray-500">SENA | 2026</p>
-                    </li>
-                    <li class="border-l-2 border-gray-300 dark:border-gray-700 pl-4">
-                        <h4 class="font-bold">Product Management & Scrum</h4>
-                        <p class="text-sm text-gray-500">Santander Open Academy & Game Code Academy | 2026</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos" class="py-20 px-6 bg-gray-50 dark:bg-[#1A1A1A] transition-colors duration-300">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-heading text-3xl font-bold mb-12">Proyectos Destacados</h2>
-            
-            <!-- Grid Responsivo para 4 Proyectos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- Proyecto 1: FinTrack -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-heading text-2xl font-bold">FinTrack</h3>
-                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio FinTrack"><i class="fa-brands fa-github text-xl"></i></a>
+        <section id="proyectos" class="py-20 px-6 bg-gray-50 dark:bg-[#1A1A1A]" aria-labelledby="projects-title">
+            <div class="max-w-6xl mx-auto">
+                <p class="section-eyebrow">Trabajo seleccionado</p>
+                <h2 id="projects-title" class="font-heading text-3xl font-bold mb-3">Proyectos destacados</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-10 max-w-2xl">Una selección de proyectos donde aplico conocimientos de desarrollo frontend, backend, bases de datos y experiencia de usuario.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="project-card">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-heading text-2xl font-bold">FinTrack</h3>
+                                <a href="https://github.com/marianavargasospina/Fintrack" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de FinTrack"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </div>
+                            <p class="project-category">Full Stack · Gestión financiera personal</p>
+                            <p class="project-description">Aplicación para administrar ingresos, gastos, transferencias, cuentas, presupuestos y metas de ahorro, con visualización de información financiera.</p>
+                            <ul class="project-points">
+                                <li>Backend con arquitectura por capas: routers, services y repositories.</li>
+                                <li>Autenticación con JWT y contraseñas protegidas mediante hashing.</li>
+                                <li>Persistencia con PostgreSQL y pruebas de API con Pytest.</li>
+                            </ul>
                         </div>
-                        <p class="text-sm text-accent font-semibold mb-3">Backend & Full Stack / Gestión Financiera</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
-                            Plataforma de gestión de finanzas personales para administración de ingresos, gastos, transferencias, cuentas, presupuestos y metas de ahorro con Dashboard interactivo.
-                        </p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
-                            <li>Arquitectura por capas: Routers, Services, Repositories y Database.</li>
-                            <li>Autenticación segura JWT y cifrado de contraseñas con Bcrypt.</li>
-                            <li>Dashboard con gráficas, filtrado y exportación de movimientos.</li>
-                            <li>Pruebas automatizadas de API integradas con Pytest y HTTPX.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">FastAPI</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">SQLAlchemy</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">Pydantic</span>
-                    </div>
-                </article>
+                        <div class="tech-list"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>JavaScript</span><span>Pytest</span></div>
+                    </article>
 
-                <!-- Proyecto 2: CodeClean AI -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-heading text-2xl font-bold">CodeClean AI</h3>
-                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio CodeClean AI"><i class="fa-brands fa-github text-xl"></i></a>
+                    <article class="project-card">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-heading text-2xl font-bold">CodeClean</h3>
+                                <a href="https://github.com/marianavargasospina/CodeClean" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de CodeClean"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </div>
+                            <p class="project-category">Frontend · Auditoría de calidad de código</p>
+                            <p class="project-description">Herramienta web que analiza fragmentos HTML y detecta oportunidades de mejora relacionadas con accesibilidad, semántica y buenas prácticas.</p>
+                            <ul class="project-points">
+                                <li>Reglas locales para identificar patrones frecuentes de problemas.</li>
+                                <li>Resultados presentados como hallazgos y recomendaciones.</li>
+                                <li>En evolución hacia una arquitectura modular y pruebas automatizadas.</li>
+                            </ul>
                         </div>
-                        <p class="text-sm text-accent font-semibold mb-3">Full Stack / Auditoría de Código con IA</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
-                            Herramienta de auditoría frontend que combina análisis estático con inteligencia artificial para evaluar calidad, semántica HTML y accesibilidad (WCAG).
-                        </p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
-                            <li>Detección de patrones inaccesibles (imágenes sin alt, estilos inline, botones sin aria).</li>
-                            <li>Evaluación semántica de estructura HTML y puntuación de calidad.</li>
-                            <li>Integración con Groq API y modelo Llama 3 para recomendaciones inteligentes.</li>
-                            <li>Motor de análisis local de respaldo (fallback) ante caídas de conexión.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">JavaScript</span>
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">Groq API</span>
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">Llama 3</span>
-                        <span class="px-3 py-1 bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300 rounded-full">HTML5/CSS3</span>
-                    </div>
-                </article>
+                        <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js Test Runner</span></div>
+                    </article>
 
-                <!-- Proyecto 3: Noticiasisa -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-heading text-2xl font-bold">Noticiasisa</h3>
-                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio Noticiasisa"><i class="fa-brands fa-github text-xl"></i></a>
+                    <article class="project-card">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-heading text-2xl font-bold">Noticiasisa</h3>
+                                <a href="https://github.com/marianavargasospina/noticiasisa" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Noticiasisa"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </div>
+                            <p class="project-category">Frontend · Plataforma editorial accesible</p>
+                            <p class="project-description">Sitio editorial responsive que presenta artículos de actualidad e incorpora narración de contenido mediante las voces disponibles en el navegador.</p>
+                            <ul class="project-points">
+                                <li>Integración con Web Speech API y controles de reproducción.</li>
+                                <li>HTML semántico y estados accesibles para tecnologías de asistencia.</li>
+                                <li>Diseño adaptable y carga diferida de imágenes secundarias.</li>
+                            </ul>
                         </div>
-                        <p class="text-sm text-accent font-semibold mb-3">Frontend / Plataforma Editorial Accesible</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
-                            Plataforma web informativa con arquitectura responsive enfocada en accesibilidad universal y síntesis de voz para lectura automatizada de noticias.
-                        </p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
-                            <li>Narración automática de artículos mediante integración con Web Speech API.</li>
-                            <li>Controles interactivos de reproducción, pausa y selección de voces.</li>
-                            <li>Implementación de atributos ARIA y estados dinámicos para lectores de pantalla.</li>
-                            <li>Maquetación limpia adaptable a cualquier resolución de pantalla.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">JS ES6+</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">Web Speech API</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">Tailwind CSS</span>
-                        <span class="px-3 py-1 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300 rounded-full">HTML5</span>
-                    </div>
-                </article>
+                        <div class="tech-list"><span>HTML5</span><span>Tailwind CSS</span><span>JavaScript</span><span>Web Speech API</span></div>
+                    </article>
 
-                <!-- Proyecto 4: Landing-Cafeteria -->
-                <article class="bg-white dark:bg-darkBg rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col justify-between hover:border-accent/50 transition-colors duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-heading text-2xl font-bold">Landing-Cafeteria</h3>
-                            <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors" aria-label="Repositorio Landing Cafetería"><i class="fa-brands fa-github text-xl"></i></a>
+                    <article class="project-card">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-heading text-2xl font-bold">Landing Cafetería</h3>
+                                <a href="https://github.com/marianavargasospina/Landing-Cafeteria" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Ver repositorio de Landing Cafetería"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </div>
+                            <p class="project-category">Frontend · Sitio web comercial</p>
+                            <p class="project-description">Landing page para presentar la identidad, productos y servicios de una cafetería mediante una interfaz visual orientada al usuario.</p>
+                            <ul class="project-points">
+                                <li>Maquetación con HTML y estilos CSS.</li>
+                                <li>Interactividad implementada con JavaScript.</li>
+                                <li>Proyecto enfocado en presentación visual y navegación.</li>
+                            </ul>
                         </div>
-                        <p class="text-sm text-accent font-semibold mb-3">Frontend / Maquetación Comercial</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 font-light">
-                            Página web comercial diseñada para transmitir la identidad visual de una cafetería y presentar sus productos y servicios de manera atractiva.
-                        </p>
-                        <ul class="text-gray-600 dark:text-gray-400 text-sm mb-6 space-y-1.5 list-disc pl-4 font-light">
-                            <li>Estructura semántica modular y mantenible (`index.html`).</li>
-                            <li>Diseño de estilos visuales limpios y modernos (`styles.css`).</li>
-                            <li>Funcionalidad e interactividad dinámicas con JavaScript (`script.js`).</li>
-                            <li>Optimizada para una experiencia de usuario fluida y navegación comercial.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap gap-2 text-xs font-medium pt-4 border-t border-gray-100 dark:border-gray-800">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">HTML5</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">CSS3</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full">JavaScript</span>
-                    </div>
-                </article>
+                        <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <section id="habilidades" class="py-20 px-6" aria-labelledby="skills-title">
+            <div class="max-w-6xl mx-auto">
+                <p class="section-eyebrow text-center">Herramientas</p>
+                <h2 id="skills-title" class="font-heading text-3xl font-bold mb-12 text-center">Tecnologías y conocimientos</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                    <div class="skill-card"><i class="fa-brands fa-python" aria-hidden="true"></i><h3>Python</h3><p>Backend</p></div>
+                    <div class="skill-card"><i class="fa-solid fa-bolt" aria-hidden="true"></i><h3>FastAPI</h3><p>APIs REST</p></div>
+                    <div class="skill-card"><i class="fa-solid fa-database" aria-hidden="true"></i><h3>PostgreSQL</h3><p>Bases de datos</p></div>
+                    <div class="skill-card"><i class="fa-brands fa-js" aria-hidden="true"></i><h3>JavaScript</h3><p>Frontend</p></div>
+                    <div class="skill-card"><i class="fa-brands fa-html5" aria-hidden="true"></i><h3>HTML5</h3><p>Estructura semántica</p></div>
+                    <div class="skill-card"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><h3>CSS3</h3><p>Diseño responsive</p></div>
+                    <div class="skill-card"><i class="fa-brands fa-git-alt" aria-hidden="true"></i><h3>Git y GitHub</h3><p>Control de versiones</p></div>
+                    <div class="skill-card"><i class="fa-solid fa-vial" aria-hidden="true"></i><h3>Pytest</h3><p>Pruebas automatizadas</p></div>
+                </div>
+                <div class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+                    <p><strong>Conceptos:</strong> APIs REST, arquitectura por capas, análisis de requerimientos, diseño de software, Scrum y calidad de software.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Habilidades -->
-    <section id="habilidades" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-heading text-3xl font-bold mb-12 text-center">Stack Tecnológico</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-brands fa-html5 text-4xl text-pink-500 mb-3"></i>
-                    <h4 class="font-bold">HTML5</h4>
-                    <p class="text-xs text-gray-500">Avanzado</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-brands fa-css3-alt text-4xl text-fuchsia-500 mb-3"></i>
-                    <h4 class="font-bold">CSS3</h4>
-                    <p class="text-xs text-gray-500">Avanzado</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-brands fa-python text-4xl text-purple-500 mb-3"></i>
-                    <h4 class="font-bold">Python</h4>
-                    <p class="text-xs text-gray-500">Sólido</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-solid fa-database text-4xl text-purple-600 mb-3"></i>
-                    <h4 class="font-bold">PostgreSQL</h4>
-                    <p class="text-xs text-gray-500">Sólido</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-brands fa-js text-4xl text-pink-400 mb-3"></i>
-                    <h4 class="font-bold">JavaScript</h4>
-                    <p class="text-xs text-gray-500">En práctica</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    <i class="fa-brands fa-git-alt text-4xl text-fuchsia-600 mb-3"></i>
-                    <h4 class="font-bold">Git</h4>
-                    <p class="text-xs text-gray-500">En práctica</p>
-                </div>
-                <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl col-span-2 md:col-span-2 flex flex-col justify-center">
-                    <h4 class="font-bold mb-2">Herramientas & Metodologías</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Scrum, Power BI, Claude Code, Prompting IA, Análisis de Calidad</p>
+        <section id="contacto" class="py-20 px-6 bg-gray-50 dark:bg-[#1A1A1A]" aria-labelledby="contact-title">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="section-eyebrow">Hablemos</p>
+                <h2 id="contact-title" class="font-heading text-3xl md:text-4xl font-bold mb-5">¿Trabajamos en una idea?</h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">Estoy interesada en oportunidades Junior, prácticas, proyectos colaborativos y retos que me permitan seguir creciendo como desarrolladora.</p>
+                <a class="primary-link inline-flex" href="mailto:marianavargasospina0@gmail.com?subject=Oportunidad%20profesional%20-%20Mariana%20Vargas"> <i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i> Escribirme por correo</a>
+                <div class="flex justify-center gap-5 mt-8">
+                    <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-accent" aria-label="GitHub"><i class="fa-brands fa-github text-2xl" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-accent" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="py-10 px-6 border-t border-gray-200 dark:border-gray-800">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-sm text-gray-500 text-center md:text-left">
-                <p class="font-medium text-lightText dark:text-white mb-1">Mariana Vargas Ospina</p>
-                <p>Desarrolladora Backend & Frontend | Sonsón, Antioquia.</p>
-                <p>Abierta a sumar valor y experiencia en nuevos proyectos.</p>
-            </div>
-            <div class="flex gap-6 text-xl text-gray-500">
-                <a href="https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/marianavargasospina" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:marianavargasospina0@gmail.com?subject=Contacto%20desde%20Portafolio%20Web%20-%20Mariana%20Vargas" class="hover:text-accent transition-colors" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
+    <footer class="py-8 px-6 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-500">
+            <p><strong class="text-lightText dark:text-white">Mariana Vargas Ospina</strong> · Sonsón, Antioquia, Colombia</p>
+            <p>Portafolio de desarrollo de software · <span id="current-year"></span></p>
         </div>
     </footer>
-
-    <!-- Lógica del Modo Oscuro -->
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const html = document.documentElement;
-
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-            html.classList.remove('dark');
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            if (html.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
-    </script>
 </body>
 </html>
