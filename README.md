@@ -63,5 +63,5 @@ Formación académica relacionada con diseño de software, arquitectura de compu
 
 - **Correo:** marianavargasospina0@gmail.com
 - **GitHub:** https://github.com/marianavargasospina
-- **LinkedIn:** https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/
+- **LinkedIn:** https://www.linkedin.com/in/marianavargasospina/
 
