@@ -1,79 +1,48 @@
-# Mariana Vargas Ospina | Portafolio
+# Mariana Vargas Ospina | Software Engineer & AI Integrator
 
-Portafolio profesional de desarrollo de software. Presenta proyectos académicos y personales, tecnologías utilizadas, formación y medios de contacto.
+![Portfolio Banner](https://via.placeholder.com/1200x300/ffb6c1/800080?text=Mariana+Vargas+Ospina+-+Software+Engineer)
+*(Nota: Aquí puedes agregar una imagen tuya o un banner con tus colores rosado y morado).*
 
-## Sitio y perfiles
+Soy **Ingeniera de Software en formación (6.º semestre)** apasionada por el diseño y desarrollo de arquitecturas escalables, integrando tecnologías Frontend y Backend. Me especializo en la construcción de REST APIs seguras, gestión de bases de datos relacionales (PostgreSQL) y la implementación de soluciones con Inteligencia Artificial aplicada para la optimización de procesos.
 
-- **Repositorio:** https://github.com/marianavargasospina/Portafolio
-- **GitHub:** https://github.com/marianavargasospina
-- **LinkedIn:** https://www.linkedin.com/in/marianavargasospina/
+**Contacto:** marianavargasospina0@gmail.com
+**LinkedIn:** [Perfil de Mariana Vargas Ospina](https://www.linkedin.com/in/mariana-vargas-ospina-1ba24a440/)
 
-## Tecnologías del portafolio
+---
 
-- HTML5 semántico
-- Tailwind CSS mediante Play CDN
-- CSS3 para estilos propios, responsive y accesibilidad
-- JavaScript moderno sin dependencias de ejecución
+## Stack Tecnológico
 
-## Estructura
+*   **Arquitectura y Backend:** Python, FastAPI, Arquitectura por Capas, SQLAlchemy, PostgreSQL, Autenticación (JWT, Bcrypt), Pytest.
+*   **Frontend y Accesibilidad:** JavaScript, HTML5, CSS3, Responsive Design, Web Speech API, Estándares ARIA, DOM Manipulation.
+*   **Herramientas, IA y Metodologías:** Git, GitHub, Power BI, Claude Code, Integración de Modelos de IA, Scrum, Product Management, QA.
 
-```text
-Portafolio/
-├── index.html       # Contenido y estructura semántica
-├── styles.css       # Estilos propios, responsive y accesibilidad
-├── script.js        # Tema, navegación móvil y año del footer
-└── README.md        # Documentación del proyecto
-```
+---
 
-## Ejecutar localmente
+## Proyectos Destacados
 
-1. Clona el repositorio:
+### 1. FinTrack | *Backend Engineer*
+Sistema backend escalable basado en capas para una plataforma de gestión financiera.
+*   Diseño de endpoints RESTful eficientes gestionando persistencia de datos mediante ORM (SQLAlchemy).
+*   Desarrollo de flujos de autenticación segura y autorización de usuarios empleando JWT y Bcrypt.
+*   Aseguramiento de fiabilidad mediante suite de pruebas automatizadas con Pytest.
 
-   ```bash
-   git clone https://github.com/marianavargasospina/Portafolio.git
-   cd Portafolio
-   ```
+### 2. CodeClean AI | *Full Stack Software Engineer*
+Analizador de código estático y semántico impulsado por IA para identificar vulnerabilidades de accesibilidad web y anti-patrones.
+*   Implementación de mecanismos de tolerancia a fallos (fallback local) garantizando la continuidad del servicio ante caídas de la API de IA.
+*   Desarrollo de interfaz reactiva con persistencia de datos (LocalStorage) y gestión de temas dinámicos (Dark/Light mode).
 
-2. Abre el proyecto con Visual Studio Code y utiliza Live Server, o inicia cualquier servidor estático desde la carpeta raíz.
+### 3. Noticiasisa | *Frontend Developer*
+Plataforma editorial moderna y multiplataforma, priorizando rendimiento de renderizado y cumplimiento estricto de estándares WCAG.
+*   Integración de **Web Speech API** para capacidades nativas de síntesis de voz, aumentando drásticamente la accesibilidad.
+*   Orquestación de estados dinámicos e implementación de atributos ARIA avanzados para lectores de pantalla.
 
-3. Abre la URL local que proporciona el servidor.
+---
 
-El proyecto carga Tailwind Play CDN, Google Fonts y Font Awesome desde servicios externos; se necesita conexión a internet para esos recursos. Para producción, conviene compilar Tailwind y fijar versiones de dependencias.
+## Educación y Certificaciones Recientes
 
-## Características
+*   **Ingeniería de Sistemas** - Universidad Nacional Abierta y a Distancia (UNAD)
+*   **Aplicación de IA en Integración de Datos & Calidad en el Desarrollo de Software** - SENA (2026)
+*   **Desarrollo de Software Asistido por IA (Agente IA, Claude Code)** (2026)
+*   **Product Management & Metodologías Ágiles Scrum** (2026)
 
-- Diseño adaptable a escritorio, tabletas y móviles.
-- Navegación móvil con estados accesibles.
-- Tema claro/oscuro con preferencia guardada en el navegador.
-- Respeto por la preferencia de movimiento reducido.
-- Enlaces directos a repositorios de proyectos y perfiles profesionales.
-- Metadatos básicos para compartir el sitio.
-
-## Proyectos presentados
-
-| Proyecto | Enfoque | Repositorio |
-|---|---|---|
-| FinTrack | Gestión financiera full-stack | [Fintrack](https://github.com/marianavargasospina/Fintrack) |
-| CodeClean | Auditoría de calidad frontend | [CodeClean](https://github.com/marianavargasospina/CodeClean) |
-| Noticiasisa | Plataforma editorial accesible | [noticiasisa](https://github.com/marianavargasospina/noticiasisa) |
-| Landing Cafetería | Sitio web comercial | [Landing-Cafeteria](https://github.com/marianavargasospina/Landing-Cafeteria) |
-
-## Mantenimiento del contenido
-
-Antes de publicar cambios, verifica que las descripciones, tecnologías, funcionalidades y enlaces correspondan al estado real de cada proyecto. Añade enlaces de demostración únicamente cuando exista un despliegue público funcional.
-
-## Accesibilidad y calidad
-
-Se recomienda validar cada versión con:
-
-- Navegación completa mediante teclado.
-- Lighthouse (rendimiento, accesibilidad, SEO y buenas prácticas).
-- Pruebas en anchos móviles y de escritorio.
-- Revisión de contraste y nombres accesibles.
-- Verificación de enlaces y recursos externos.
-
-## Autora
-
-**Mariana Vargas Ospina**  
-Estudiante de Ingeniería de Sistemas | Desarrollo web  
-Sonsón, Antioquia, Colombia
+> *"Enfoque orientado a la entrega de productos de alto rendimiento, accesibles y alineados con los objetivos del negocio."*
