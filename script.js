@@ -54,3 +54,35 @@ document.addEventListener("keydown", (event) => {
 });
 
 year.textContent = String(new Date().getFullYear());
+
+
+const copyEmailButton = document.getElementById("copy-email");
+const copyEmailStatus = document.getElementById("copy-email-status");
+
+if (copyEmailButton && copyEmailStatus) {
+    copyEmailButton.addEventListener("click", async () => {
+        const email = copyEmailButton.dataset.email;
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(email);
+            } else {
+                const temporaryInput = document.createElement("textarea");
+                temporaryInput.value = email;
+                temporaryInput.setAttribute("readonly", "");
+                temporaryInput.style.position = "absolute";
+                temporaryInput.style.left = "-9999px";
+                document.body.appendChild(temporaryInput);
+                temporaryInput.select();
+                const copied = document.execCommand("copy");
+                temporaryInput.remove();
+
+                if (!copied) throw new Error("No fue posible copiar el correo.");
+            }
+
+            copyEmailStatus.textContent = "Correo copiado. Ya puedes pegarlo en tu aplicación de correo.";
+        } catch (error) {
+            copyEmailStatus.textContent = "No se pudo copiar automáticamente. Selecciona y copia: " + email;
+        }
+    });
+}
